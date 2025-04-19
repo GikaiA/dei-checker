@@ -21,7 +21,7 @@ app.post("/api/extract-dei", async (req, res) => {
   if (!url) return res.status(400).json({ error: "URL is required." });
 
   try {
-    const { text } = await getText(url);
+    const text = await getText(url);
 
     const completion = await openai.chat.completions.create({
       model: "gpt-4",
