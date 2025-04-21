@@ -11,6 +11,7 @@ const require = createRequire(import.meta.url);
 const getText = require("web-to-text");
 
 const app = express();
+// eslint-disable-next-line no-undef
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 app.use(cors());
